@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue-one: #172439;
+  --blue-two: #101928;
+  --green-one: #defd61;
+  --green-two: #cdea5a;
+  --red-one: #cb2027;
+  --red-two: #b11d23;
+}
+
+@layer components {
+  .plain-table{
+    @apply w-full text-sm text-left text-gray-500;
+  }
+
+  .plain-table thead{
+    @apply text-sm uppercase;
+  }
+
+  .plain-table thead tr{
+    @apply  bg-white;
+  }
+
+  .plain-table thead tr th{
+    @apply px-6 py-3 text-black border-2;
+  }
+
+  .plain-table tbody tr{
+    @apply bg-white border-b hover:bg-gray-50 text-[#172439] text-base;
+  }
+
+  .plain-table tbody td{
+    @apply px-6 py-4 border-2 whitespace-nowrap;
+  }
+
+  .plain-table tfoot{
+    @apply text-sm uppercase;
+  }
+
+  .plain-table tfoot tr{
+    @apply  bg-white;
+  }
+
+  .plain-table tfoot tr th{
+    @apply px-6 py-3 text-black border-2;
+  }
+}
