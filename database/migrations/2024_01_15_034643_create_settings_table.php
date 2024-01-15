@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('staff_roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('title');
-            $table->tinyInteger('rank')->default(0);
-            $table->datetime('created_at')->nullable();
-            $table->datetime('updated_at')->nullable();
+        Schema::create('settings', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->text('mobile_1');
+            $table->text('mobile_2')->nullable();
+            $table->text('address');
+            $table->string('email');
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff_roles');
+        Schema::dropIfExists('settings');
     }
 };
